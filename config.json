@@ -1,0 +1,7 @@
+{
+  "sms_api": {
+    "url": "https://smsapi.free-mobile.fr/sendmsg",
+    "key": "9FFNYPtSfDzc3v",
+    "user": "35995156"
+  }
+}
