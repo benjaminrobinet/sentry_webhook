@@ -1,14 +1,16 @@
-const http = require('http');
+const app = require('express')();
 const bodyParser = require('body-parser');
-const app = require('express')(http);
+const http = require('http').Server(app);
 
-app.use(bodyParser.json);
+app.use(bodyParser.json({
+    type: 'application/json'
+}));
 
-app.post('/', function (req, res) {
+app.post('/test', function (req, res) {
     console.log(req.body);
-    console.log('new req');
+    res.sendStatus(200);
 });
 
-app.listen(2727, function () {
-    console.log('listening');
+http.listen(2727, function () {
+    console.log('Listening on 2727');
 });
